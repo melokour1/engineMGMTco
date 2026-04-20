@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get 3 FREE Tips to Rank Higher on Google · EngineMgmt</title>
+  <meta name="description" content="Get a free video showing the first three things we do when we start working with a local business to get them ranking in the top 3 on Google.">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-icon.svg">
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    /* Tips page — split layout (left copy, right form) */
+    .tips-split {
+      padding: 72px 0 96px;
+    }
+    .tips-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .tips-left h1 {
+      margin-bottom: 24px;
+    }
+    .tips-left p {
+      color: var(--ink-60);
+      font-size: 18px;
+      margin-bottom: 16px;
+      max-width: 480px;
+    }
+    .tips-guarantee {
+      margin-top: 32px;
+      color: var(--ink-60);
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .tips-form-box {
+      background: var(--cream-soft);
+      border: 1px solid var(--ink-12);
+      border-radius: var(--radius-card);
+      padding: 40px 36px;
+    }
+    .tips-form-box .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .tips-form-box .input {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 14px;
+    }
+    .tips-form-box .form-grid .input {
+      margin-bottom: 0;
+    }
+    /* Timeline radio group */
+    .radio-group {
+      margin-bottom: 24px;
+    }
+    .radio-group label.group-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink-60);
+      margin-bottom: 10px;
+    }
+    .radio-options {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: var(--cream);
+      border: 1px solid var(--ink-12);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: border-color .15s ease, background .15s ease;
+    }
+    .radio-option input[type="radio"] {
+      accent-color: var(--ink);
+      width: 14px;
+      height: 14px;
+    }
+    .radio-option:has(input:checked) {
+      background: var(--ink);
+      color: var(--cream);
+      border-color: var(--ink);
+    }
+    .tips-submit {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 18px 28px;
+      background: var(--ink);
+      color: var(--cream);
+      border-radius: var(--radius-pill);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .tips-submit:hover { transform: translateY(-1px); background: #1a1a1a; }
+    .tips-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    @media (max-width: 900px) {
+      .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .tips-left h1 { text-align: center; }
+      .tips-left p { max-width: 100%; text-align: center; }
+      .tips-guarantee { text-align: center; }
+      .tips-form-box { padding: 32px 24px; }
+    }
+    @media (max-width: 520px) {
+      .tips-form-box .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .radio-options { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo-link">
+        <span class="logo-icon"><img src="/assets/logo-icon.svg" alt=""></span>
+        <span class="logo-text">EngineMgmt</span>
+      </a>
+      <a href="/strategy" class="btn btn-primary btn-sm">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- ========== SPLIT HERO ========== -->
+  <section class="tips-split">
+    <div class="container">
+      <div class="tips-grid">
+
+        <!-- LEFT: copy -->
+        <div class="tips-left">
+          <div class="section-label"><span class="pill">Free stuff</span></div>
+          <h1>Get 3 FREE Tips to <span class="serif-accent">Rank Higher</span> on Google</h1>
+          <p>Get a free video showing you the first three things we do when we start working with a local business to get them ranking in the top 3.</p>
+          <p>Fill out the form and we will send you the video with the exact things that need to happen so you can rank in the top 3 within your area.</p>
+          <p class="tips-guarantee">No costs, no obligations, no annoying sales pitch. Guaranteed.</p>
+        </div>
+
+        <!-- RIGHT: form -->
+        <div class="tips-form-box">
+          <form id="tipsForm" novalidate>
+            <div class="form-grid">
+              <input type="text" name="first_name" class="input" placeholder="First name *" required>
+              <input type="text" name="last_name" class="input" placeholder="Last name *" required>
+            </div>
+            <input type="email" name="email" class="input" placeholder="Business Email *" required>
+            <div class="form-grid">
+              <input type="tel" name="phone" class="input" placeholder="Phone Number *" required>
+              <input type="text" name="business_name" class="input" placeholder="Business Name *" required>
+            </div>
+            <input type="url" name="business_website" class="input" placeholder="Your Website (optional)">
+            <input type="text" name="google_maps_url" class="input" placeholder="Your Google Maps URL (optional)">
+
+            <div class="radio-group">
+              <label class="group-label">By when do you want to solve this problem? *</label>
+              <div class="radio-options">
+                <label class="radio-option">
+                  <input type="radio" name="timeline" value="Today" required>
+                  Today
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="timeline" value="Tomorrow">
+                  Tomorrow
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="timeline" value="In a few weeks">
+                  In a few weeks
+                </label>
+              </div>
+            </div>
+
+            <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+
+            <button type="submit" class="tips-submit">
+              Get 3 FREE Tips
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </button>
+            <div class="form-message" style="margin-top: 14px; text-align: center;"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="text-center" style="margin-bottom: 16px;">
+        <span class="pill">Questions</span>
+      </div>
+      <h2 style="text-align: center; margin-bottom: 0;">Frequently<br><span class="serif-accent">Asked Questions</span></h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-q">
+            1. How do I know you can actually get me into the top 3?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">We've done it for local businesses across multiple industries. The free video shows you the exact process — you can verify every tip yourself before spending a single dollar with us.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            2. Is this actually free? What's the catch?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">It's genuinely free. We share these tips because we know that once you see what's possible, some of you will want us to handle the full implementation. There's no sales call pressure — you get the video either way.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            3. Will this work for my specific type of business?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">If your business serves a local area and you want to show up when customers search on Google, yes. These tips work for service businesses, retail, restaurants, contractors, and more.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            4. How long until I actually see results?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">Some tips produce results within days. Full top-3 ranking typically takes 30–90 days depending on your market's competitiveness. The video gives you a realistic timeline for your situation.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            5. How much of my time does this require?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">The three tips can be applied in a few hours. If you'd rather not deal with it at all, that's exactly what our service is for — we handle everything while you focus on running your business.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            6. Do I have to hire you after watching the video?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">Absolutely not. The video is yours to keep and use. If you decide you want us to implement a full strategy, we're here. If not, the tips still work on their own.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-link" style="margin-bottom: 20px;">
+            <span class="logo-icon"><img src="/assets/logo-icon.svg" alt=""></span>
+            <span class="logo-text">EngineMgmt</span>
+          </div>
+          <h3>Dominate Your <span class="serif-accent">Local Market.</span></h3>
+          <p>Built for local businesses.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/terms">Terms of Service</a>
+        </div>
+        <div class="footer-col">
+          <h4>Engine Management Co</h4>
+          <address>
+            13900 Inglewood Ave, Suite A<br>
+            Hawthorne, CA 90250<br>
+            <a href="tel:+13102190062">+1 (310) 219-0062</a><br>
+            <a href="mailto:mohammed@enginemanagement.co">mohammed@enginemanagement.co</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 All rights reserved by Engine Management Co.</div>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>

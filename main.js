@@ -166,6 +166,60 @@ async function submitStrategyForm(e) {
   }
 }
 
+// Tips page form — sends lead and shows success message
+async function submitTipsForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const msgEl = form.querySelector('.form-message');
+  const btn = form.querySelector('button[type="submit"]');
+  const origBtnHTML = btn.innerHTML;
+
+  msgEl.className = 'form-message';
+  msgEl.textContent = '';
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  const timeline = form.querySelector('input[name="timeline"]:checked');
+
+  const payload = {
+    form_type: 'tips',
+    first_name: form.first_name.value.trim(),
+    last_name: form.last_name.value.trim(),
+    email: form.email.value.trim(),
+    phone: form.phone.value.trim(),
+    business_name: form.business_name.value.trim(),
+    business_website: form.business_website.value.trim() || 'not_provided',
+    google_maps_url: form.google_maps_url.value.trim() || 'not_provided',
+    timeline: timeline ? timeline.value : 'not_provided',
+    honeypot: form.website.value,
+    ...getUTMs()
+  };
+
+  try {
+    const res = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json().catch(() => ({ success: false }));
+
+    if (data.success) {
+      msgEl.className = 'form-message success';
+      msgEl.textContent = '✓ Done! Check your email — your free video is on the way.';
+      form.reset();
+    } else {
+      msgEl.className = 'form-message error';
+      msgEl.textContent = 'Something went wrong. Please try again.';
+    }
+  } catch (err) {
+    msgEl.className = 'form-message error';
+    msgEl.textContent = 'Network error. Please try again.';
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = origBtnHTML;
+  }
+}
+
 // Before/After map toggle
 function initMapToggle() {
   const toggleBtns = document.querySelectorAll('.map-toggle button');
@@ -224,6 +278,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const stratForm = document.getElementById('strategyForm');
   if (stratForm) stratForm.addEventListener('submit', submitStrategyForm);
+
+  const tipsForm = document.getElementById('tipsForm');
+  if (tipsForm) tipsForm.addEventListener('submit', submitTipsForm);
 
   initMapToggle();
 });
