@@ -1,6 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
   <rect width="36" height="36" rx="9" fill="#0A0A0A"/>
-  <rect x="6" y="22" width="6" height="9" rx="1.5" fill="white"/>
-  <rect x="15" y="15" width="6" height="16" rx="1.5" fill="white"/>
-  <rect x="24" y="7" width="6" height="24" rx="1.5" fill="white"/>
+  <!-- main engine block -->
+  <rect x="13" y="12" width="13" height="12" rx="0.5" fill="white"/>
+  <!-- left pulley/circle -->
+  <circle cx="10.5" cy="18" r="2.5" fill="white"/>
+  <!-- 4 top intake tabs -->
+  <rect x="14" y="10" width="2" height="3"  rx="0.3" fill="white"/>
+  <rect x="17" y="10" width="2" height="3"  rx="0.3" fill="white"/>
+  <rect x="20" y="10" width="2" height="3"  rx="0.3" fill="white"/>
+  <rect x="23" y="10" width="2" height="3"  rx="0.3" fill="white"/>
+  <!-- right side block -->
+  <rect x="26" y="14" width="2" height="7"  rx="0.3" fill="white"/>
+  <!-- 4 bottom mounting feet -->
+  <rect x="14" y="24" width="2" height="2"  rx="0.3" fill="white"/>
+  <rect x="17" y="24" width="2" height="2"  rx="0.3" fill="white"/>
+  <rect x="20" y="24" width="2" height="2"  rx="0.3" fill="white"/>
+  <rect x="23" y="24" width="2" height="2"  rx="0.3" fill="white"/>
 </svg>
