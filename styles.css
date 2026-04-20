@@ -575,6 +575,31 @@ p { margin: 0 0 1em; }
   border-color: var(--ink);
 }
 
+/* ── watch.html ── */
+.watch-embed {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 48px;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-card);
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  font-size: 14px;
+  opacity: 0.6;
+}
+.watch-next-cta {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--cream-soft);
+  border: 1px solid var(--ink-12);
+  border-radius: var(--radius-card);
+  padding: 40px 36px;
+  text-align: center;
+}
+
 /* ── Responsive additions ── */
 @media (max-width: 640px) {
   .step-row {
