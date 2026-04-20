@@ -4,17 +4,23 @@
   <!-- Background -->
   <rect width="1600" height="900" fill="#F5EFE3"/>
 
-  <!-- Icon box -->
-  <rect x="740" y="310" width="120" height="120" rx="26" fill="#0A0A0A"/>
+  <!-- Icon box (120×120, centered at x=800) -->
+  <rect x="740" y="323" width="120" height="120" rx="26" fill="#0A0A0A"/>
 
-  <!-- Engine icon scaled to fit 84×84 inner area, centered -->
-  <g transform="translate(760,330) scale(3.6)" fill="white">
-    <rect x="6"  y="6"  width="14" height="10" rx="1"/>
-    <rect x="2"  y="8"  width="5"  height="5"  rx="1"/>
-    <rect x="7"  y="3"  width="4"  height="4"  rx="0.5"/>
-    <rect x="15" y="3"  width="4"  height="4"  rx="0.5"/>
-    <rect x="6"  y="16" width="3"  height="3"  rx="0.5"/>
-    <rect x="17" y="16" width="3"  height="3"  rx="0.5"/>
+  <!-- Engine icon: same 22×22 design, scale(4), centered in 84×84 inner area -->
+  <!-- Inner area: (758,341)→(842,425). transform centers engine bounding box exactly -->
+  <g transform="translate(756,339) scale(4)" fill="white">
+    <rect x="6"  y="5"  width="13" height="12" rx="0.125"/>
+    <circle cx="3.5" cy="11" r="2.5"/>
+    <rect x="7"  y="3"  width="2" height="3"  rx="0.075"/>
+    <rect x="10" y="3"  width="2" height="3"  rx="0.075"/>
+    <rect x="13" y="3"  width="2" height="3"  rx="0.075"/>
+    <rect x="16" y="3"  width="2" height="3"  rx="0.075"/>
+    <rect x="19" y="7"  width="2" height="7"  rx="0.075"/>
+    <rect x="7"  y="17" width="2" height="2"  rx="0.075"/>
+    <rect x="10" y="17" width="2" height="2"  rx="0.075"/>
+    <rect x="13" y="17" width="2" height="2"  rx="0.075"/>
+    <rect x="16" y="17" width="2" height="2"  rx="0.075"/>
   </g>
 
   <!-- Company name -->
@@ -31,6 +37,6 @@
         fill="rgba(10,10,10,0.45)"
         font-size="22"
         font-weight="500"
-        letter-spacing="5">LOCAL SEO · BUILT FOR LOCAL BUSINESSES</text>
+        letter-spacing="6">LOCAL SEO</text>
 
 </svg>
