@@ -121,30 +121,34 @@
       <span class="pill">How does it work?</span>
     </div>
     <h2 class="text-center">It's pretty <span class="serif-accent">easy</span>.</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <div class="steps-numbered">
+      <div class="step-row">
+        <div class="step-num">01</div>
+        <div>
+          <div class="step-title">Strategy call</div>
+          <p class="step-desc">Book a free call so we can assess your market and current rankings.</p>
         </div>
-        <p class="step-text"><strong>01. Strategy call</strong> — Book a free call so we can assess your market and current rankings.</p>
       </div>
-      <div class="step">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      <div class="step-row">
+        <div class="step-num">02</div>
+        <div>
+          <div class="step-title">Onboarding</div>
+          <p class="step-desc">We send you step-by-step instructions for granting us secure access to your Google Business Profile.</p>
         </div>
-        <p class="step-text"><strong>02. Onboarding</strong> — We send you step-by-step instructions for granting us secure access to your Google Business Profile.</p>
       </div>
-      <div class="step">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+      <div class="step-row">
+        <div class="step-num">03</div>
+        <div>
+          <div class="step-title">Execution</div>
+          <p class="step-desc">We handle the optimization, content, citations, and backend work. You focus on running your business.</p>
         </div>
-        <p class="step-text"><strong>03. Execution</strong> — We handle the optimization, content, citations, and backend work. You focus on running your business.</p>
       </div>
-      <div class="step">
-        <div class="step-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      <div class="step-row">
+        <div class="step-num">04</div>
+        <div>
+          <div class="step-title">What works?</div>
+          <p class="step-desc">We track the data to see what's moving the needle and double down on it.</p>
         </div>
-        <p class="step-text"><strong>04. What works?</strong> — We track the data to see what's moving the needle and double down on it.</p>
       </div>
     </div>
   </div>
@@ -158,26 +162,41 @@
     </div>
     <h2 class="text-center">Frequently asked <span class="serif-accent">questions</span></h2>
     <div class="faq-list">
-      <details class="faq-item">
-        <summary class="faq-q">What is the difference between SEO and Google Ads? <span class="faq-icon"></span></summary>
-        <div class="faq-a">Google Ads puts you at the top of results for as long as you keep paying. The moment the budget runs out, your visibility disappears. SEO (what we do) earns your ranking organically — Google places you there because it considers you the most relevant result. Once you're there, you stay without ongoing ad spend.</div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">Which companies do you work with? <span class="faq-icon"></span></summary>
-        <div class="faq-a">We work exclusively with local businesses — auto shops, dentists, plumbers, lawyers, restaurants, home services, anything where customers search for your service plus a city or neighborhood. If people search "your service near me" we can help.</div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">How much time will I need to invest? <span class="faq-icon"></span></summary>
-        <div class="faq-a">Very little. We handle the work on our end. During onboarding we'll need about 15 minutes to get secure access to your Google Business Profile. After that, we send you regular updates so you always know where you stand.</div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">What are the contract terms? <span class="faq-icon"></span></summary>
-        <div class="faq-a">Month-to-month. No long-term lock-in. You can cancel anytime. Most clients stay because the results speak for themselves, but we never force anyone to stick around.</div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">How can we get started? <span class="faq-icon"></span></summary>
-        <div class="faq-a">Book a quick strategy call using the button on this page. We'll look at your current Google presence together, assess your market, and tell you exactly what it would take to get you into the top 3. No pressure, no obligation.</div>
-      </details>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What is the difference between SEO and Google Ads?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" hidden>Google Ads puts you at the top of results for as long as you keep paying. The moment the budget runs out, your visibility disappears. SEO (what we do) earns your ranking organically — Google places you there because it considers you the most relevant result. Once you're there, you stay without ongoing ad spend.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          Which companies do you work with?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" hidden>We work exclusively with local businesses — auto shops, dentists, plumbers, lawyers, restaurants, home services, anything where customers search for your service plus a city or neighborhood. If people search "your service near me" we can help.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How much time will I need to invest?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" hidden>Very little. We handle the work on our end. During onboarding we'll need about 15 minutes to get secure access to your Google Business Profile. After that, we send you regular updates so you always know where you stand.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          What are the contract terms?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" hidden>Month-to-month. No long-term lock-in. You can cancel anytime. Most clients stay because the results speak for themselves, but we never force anyone to stick around.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          How can we get started?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a" hidden>Book a quick strategy call using the button on this page. We'll look at your current Google presence together, assess your market, and tell you exactly what it would take to get you into the top 3. No pressure, no obligation.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -195,28 +214,6 @@
         If this sounds like what your business needs, let's talk. Book a quick call with us and we'll walk you through exactly how we'd get you ranking in the top 3.
       </p>
       <a href="#apply" class="btn btn-primary btn-lg">Book a strategy call</a>
-    </div>
-  </div>
-</section>
-
-<!-- ========== CALENDLY EMBED ========== -->
-<section class="section-sm">
-  <div class="container">
-    <div class="calendly-box">
-      <!-- Replace this placeholder with your real Calendly embed once set up.
-      Example: <div class="calendly-inline-widget" data-url="https://calendly.com/mohammed-enginemgmt/strategy-call?hide_event_type_details=1" style="min-width:320px;height:700px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      -->
-      <div class="calendly-placeholder">
-        <div>
-          <div style="font-size: 48px; margin-bottom: 12px;">📅</div>
-          <h3 style="margin-bottom: 12px;">Calendly embed coming soon</h3>
-          <p style="color: var(--ink-60); margin-bottom: 20px; max-width: 420px;">
-            Book your free 30-minute strategy call. We'll look at your current rankings together and tell you exactly what it would take to get you into the top 3.
-          </p>
-          <a href="#apply" class="btn btn-primary">Send an application instead</a>
-        </div>
-      </div>
     </div>
   </div>
 </section>

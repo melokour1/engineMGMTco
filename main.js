@@ -283,4 +283,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (tipsForm) tipsForm.addEventListener('submit', submitTipsForm);
 
   initMapToggle();
+
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    const answer = item.querySelector('.faq-a');
+    if (!btn || !answer) return;
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-item').forEach(other => {
+        other.querySelector('.faq-q')?.setAttribute('aria-expanded', 'false');
+        if (other.querySelector('.faq-a')) other.querySelector('.faq-a').hidden = true;
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        answer.hidden = false;
+      }
+    });
+  });
 });
