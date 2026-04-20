@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get 3 FREE Tips to Rank Higher on Google · EngineMgmt</title>
+  <meta name="description" content="Get a free video showing the first three things we do when we start working with a local business to get them ranking in the top 3 on Google.">
+  <meta name="robots" content="noindex">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-icon.svg">
+  <link rel="stylesheet" href="/styles.css">
+
+  <style>
+    /* ── free-analysis page overrides ─────────────────────────── */
+
+    /* underline-only inputs to match profresults aesthetic */
+    .fa-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--ink-40);
+      border-radius: 0;
+      padding: 14px 0;
+      font-family: inherit;
+      font-size: 16px;
+      color: var(--ink);
+      transition: border-color .15s ease;
+    }
+    .fa-input:focus {
+      outline: none;
+      border-bottom-color: var(--ink);
+    }
+    .fa-input::placeholder {
+      color: var(--ink-40);
+    }
+
+    /* phone prefix row */
+    .phone-row {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 0;
+      border-bottom: 1px solid var(--ink-40);
+      margin-bottom: 0;
+    }
+    .phone-row .fa-input {
+      border-bottom: none;
+    }
+    .phone-prefix {
+      padding: 14px 0;
+      font-size: 16px;
+      color: var(--ink);
+      border-right: 1px solid var(--ink-40);
+      padding-right: 16px;
+    }
+    .phone-row .fa-input { padding-left: 16px; }
+
+    /* two-col row */
+    .fa-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--ink-40);
+    }
+    .fa-two-col .fa-input {
+      border-bottom: none;
+    }
+    .fa-two-col .fa-input:first-child {
+      border-right: 1px solid var(--ink-40);
+      padding-right: 20px;
+    }
+    .fa-two-col .fa-input:last-child {
+      padding-left: 20px;
+    }
+
+    /* field wrapper for single underline inputs */
+    .fa-field { border-bottom: 1px solid var(--ink-40); }
+    .fa-field .fa-input { border-bottom: none; }
+
+    /* field stack */
+    .fa-form { display: flex; flex-direction: column; gap: 8px; }
+
+    /* timeline radios */
+    .timeline-label {
+      font-size: 15px;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .timeline-options { display: flex; gap: 10px; flex-wrap: wrap; }
+    .timeline-opt {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 20px;
+      border: 1px solid var(--ink-40);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background .15s ease, border-color .15s ease, color .15s ease;
+    }
+    .timeline-opt input[type="radio"] { display: none; }
+    .timeline-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--ink-12);
+      border: 1px solid var(--ink-40);
+      flex-shrink: 0;
+      transition: background .15s ease;
+    }
+    .timeline-opt.selected {
+      border-color: var(--ink);
+    }
+    .timeline-opt.selected .timeline-dot {
+      background: var(--ink);
+      border-color: var(--ink);
+    }
+
+    /* submit */
+    .fa-submit {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 20px 28px;
+      background: var(--ink);
+      color: var(--cream);
+      border: none;
+      border-radius: var(--radius-pill);
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 32px;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .fa-submit:hover { transform: translateY(-1px); background: #1a1a1a; }
+    .fa-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    /* split layout */
+    .fa-split { padding: 72px 0 96px; }
+    .fa-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .fa-left h1 {
+      font-size: clamp(44px, 6vw, 80px);
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      margin-bottom: 28px;
+    }
+    .fa-left p {
+      font-size: 17px;
+      color: var(--ink-60);
+      max-width: 440px;
+      margin-bottom: 12px;
+    }
+    .fa-guarantee {
+      font-size: 16px;
+      color: var(--ink-60);
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .fa-grid { grid-template-columns: 1fr; gap: 48px; }
+      .fa-left h1 { font-size: clamp(40px, 8vw, 64px); }
+      .fa-left p { max-width: 100%; }
+    }
+    @media (max-width: 520px) {
+      .fa-two-col { grid-template-columns: 1fr; }
+      .fa-two-col .fa-input:first-child { border-right: none; border-bottom: 1px solid var(--ink-40); padding-right: 0; }
+      .fa-two-col .fa-input:last-child { padding-left: 0; }
+      .timeline-options { flex-direction: column; }
+      .timeline-opt { width: fit-content; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo-link">
+        <span class="logo-icon"><img src="/assets/logo-icon.svg" alt=""></span>
+        <span class="logo-text">EngineMgmt</span>
+      </a>
+      <a href="/strategy" class="btn btn-primary btn-sm">Sign Up</a>
+    </div>
+  </header>
+
+  <!-- ═══════════ SPLIT HERO ═══════════ -->
+  <section class="fa-split">
+    <div class="container">
+      <div class="fa-grid">
+
+        <!-- LEFT -->
+        <div class="fa-left">
+          <div class="section-label" style="margin-bottom: 28px;"><span class="pill">Free Stuff</span></div>
+          <h1>Get 3 FREE Tips to<br><span class="serif-accent">Rank Higher</span><br>on Google</h1>
+          <p>Fill out the form and we will send you a free video with the exact things that need to happen so you can rank in the top 3 within your area.</p>
+          <p class="fa-guarantee">No costs, no obligations, no annoying sales pitch. Guaranteed.</p>
+        </div>
+
+        <!-- RIGHT: form -->
+        <div>
+          <form id="freeAnalysisForm" class="fa-form" novalidate>
+
+            <div class="fa-field">
+              <input type="text" name="full_name" class="fa-input" placeholder="Full Name *" required>
+            </div>
+
+            <div class="fa-field">
+              <input type="email" name="email" class="fa-input" placeholder="Business Email *" required>
+            </div>
+
+            <div class="phone-row">
+              <span class="phone-prefix">+1 *</span>
+              <input type="tel" name="phone" class="fa-input" placeholder="Phone Number *" required>
+            </div>
+
+            <div class="fa-two-col">
+              <input type="url" name="business_website" class="fa-input" placeholder="Website *" required>
+              <input type="text" name="company_name" class="fa-input" placeholder="Company Name *" required>
+            </div>
+
+            <div class="fa-field">
+              <input type="text" name="google_maps_url" class="fa-input" placeholder="Your Google Maps URL *" required>
+            </div>
+
+            <!-- honeypot -->
+            <input type="text" name="honeypot" class="honeypot" tabindex="-1" autocomplete="off">
+
+            <div style="margin-top: 24px;">
+              <p class="timeline-label">By when do you want to solve this problem? *</p>
+              <div class="timeline-options">
+                <label class="timeline-opt selected">
+                  <input type="radio" name="timeline" value="Today" checked>
+                  <span class="timeline-dot"></span>
+                  Today
+                </label>
+                <label class="timeline-opt">
+                  <input type="radio" name="timeline" value="Tomorrow">
+                  <span class="timeline-dot"></span>
+                  Tomorrow
+                </label>
+                <label class="timeline-opt">
+                  <input type="radio" name="timeline" value="In a few weeks">
+                  <span class="timeline-dot"></span>
+                  In a few weeks
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="fa-submit">
+              Submit
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </button>
+            <div class="form-message" style="margin-top: 14px; text-align: center;"></div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FAQ ═══════════ -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container" style="max-width: 820px;">
+      <div class="text-center" style="margin-bottom: 16px;">
+        <span class="pill">Questions</span>
+      </div>
+      <h2 style="text-align: center; margin-bottom: 48px;">Frequently<br><span class="serif-accent">Asked Questions</span></h2>
+
+      <div class="faq-list" style="margin-top: 0;">
+        <details class="faq-item">
+          <summary class="faq-q">
+            1. How do I know you can actually get me into the top 3?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">We've done it for local businesses across multiple industries. The free video shows you the exact process — you can verify every tip yourself before spending a single dollar with us.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            2. Is this actually free? What's the catch?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">It's genuinely free. We share these tips because we know that once you see what's possible, some of you will want us to handle the full implementation. There's no sales call pressure — you get the video either way.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            3. Will this work for my specific type of business?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">If your business serves a local area and you want to show up when customers search on Google, yes. These tips work for service businesses, retail, restaurants, contractors, and more.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            4. How long until I actually see results?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">Some tips produce results within days. Full top-3 ranking typically takes 30–90 days depending on your market's competitiveness. The video gives you a realistic timeline for your situation.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            5. How much of my time does this require?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">The three tips can be applied in a few hours. If you'd rather not deal with it at all, that's exactly what our service is for — we handle everything while you focus on running your business.</p>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">
+            6. Do I have to hire you after watching the video?
+            <span class="faq-icon"></span>
+          </summary>
+          <p class="faq-a">Absolutely not. The video is yours to keep and use. If you decide you want us to implement a full strategy, we're here. If not, the tips still work on their own.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-link" style="margin-bottom: 20px;">
+            <span class="logo-icon"><img src="/assets/logo-icon.svg" alt=""></span>
+            <span class="logo-text">EngineMgmt</span>
+          </div>
+          <h3>Dominate Your <span class="serif-accent">Local Market.</span></h3>
+          <p>Built for local businesses.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/terms">Terms of Service</a>
+        </div>
+        <div class="footer-col">
+          <h4>Engine Management Co</h4>
+          <address>
+            13900 Inglewood Ave, Suite A<br>
+            Hawthorne, CA 90250<br>
+            <a href="tel:+13102190062">+1 (310) 219-0062</a><br>
+            <a href="mailto:mohammed@enginemanagement.co">mohammed@enginemanagement.co</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 All rights reserved by Engine Management Co.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Timeline radio pill selection
+    document.querySelectorAll('.timeline-opt').forEach(opt => {
+      opt.addEventListener('click', () => {
+        document.querySelectorAll('.timeline-opt').forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        opt.querySelector('input[type="radio"]').checked = true;
+      });
+    });
+  </script>
+  <script src="/main.js"></script>
+</body>
+</html>

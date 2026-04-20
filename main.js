@@ -166,8 +166,8 @@ async function submitStrategyForm(e) {
   }
 }
 
-// Tips page form — sends lead and shows success message
-async function submitTipsForm(e) {
+// Free-analysis page form
+async function submitFreeAnalysisForm(e) {
   e.preventDefault();
   const form = e.target;
   const msgEl = form.querySelector('.form-message');
@@ -182,16 +182,14 @@ async function submitTipsForm(e) {
   const timeline = form.querySelector('input[name="timeline"]:checked');
 
   const payload = {
-    form_type: 'tips',
-    first_name: form.first_name.value.trim(),
-    last_name: form.last_name.value.trim(),
+    form_type: 'free_analysis',
+    full_name: form.full_name.value.trim(),
     email: form.email.value.trim(),
     phone: form.phone.value.trim(),
-    business_name: form.business_name.value.trim(),
-    business_website: form.business_website.value.trim() || 'not_provided',
+    business_website: form.business_website ? form.business_website.value.trim() : 'not_provided',
+    company_name: form.company_name.value.trim(),
     google_maps_url: form.google_maps_url.value.trim() || 'not_provided',
     timeline: timeline ? timeline.value : 'not_provided',
-    honeypot: form.website.value,
     ...getUTMs()
   };
 
@@ -207,6 +205,9 @@ async function submitTipsForm(e) {
       msgEl.className = 'form-message success';
       msgEl.textContent = '✓ Done! Check your email — your free video is on the way.';
       form.reset();
+      document.querySelectorAll('.timeline-opt').forEach((o, i) => {
+        o.classList.toggle('selected', i === 0);
+      });
     } else {
       msgEl.className = 'form-message error';
       msgEl.textContent = 'Something went wrong. Please try again.';
@@ -280,7 +281,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (stratForm) stratForm.addEventListener('submit', submitStrategyForm);
 
   const tipsForm = document.getElementById('tipsForm');
-  if (tipsForm) tipsForm.addEventListener('submit', submitTipsForm);
+  if (tipsForm) tipsForm.addEventListener('submit', submitFreeAnalysisForm);
+
+  const freeAnalysisForm = document.getElementById('freeAnalysisForm');
+  if (freeAnalysisForm) freeAnalysisForm.addEventListener('submit', submitFreeAnalysisForm);
 
   initMapToggle();
 });
