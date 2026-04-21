@@ -404,6 +404,23 @@ p { margin: 0 0 1em; }
   to   { transform: translateX(-50%); }
 }
 
+.ticker-logo-img {
+  height: 28px;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  opacity: 0.45;
+  filter: grayscale(1);
+  flex-shrink: 0;
+}
+
+/* Apple is icon-only — slightly smaller */
+.ticker-logo-img[alt="Apple"] { height: 24px; }
+/* Wordmark-style logos — slightly shorter for optical balance */
+.ticker-logo-img[alt="LinkedIn"],
+.ticker-logo-img[alt="Facebook"],
+.ticker-logo-img[alt="Bing"] { height: 22px; }
+
 /* ── strategy.html: stat bar ── */
 .trust-bar {
   display: flex;
