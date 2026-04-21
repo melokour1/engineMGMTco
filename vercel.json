@@ -5,7 +5,8 @@
     { "source": "/strategy", "destination": "/strategy.html" },
     { "source": "/tips",     "destination": "/tips.html"     },
     { "source": "/watch",    "destination": "/watch.html"    },
-    { "source": "/terms",    "destination": "/terms.html"    }
+    { "source": "/terms",    "destination": "/terms.html"    },
+    { "source": "/privacy",  "destination": "/privacy.html"  }
   ],
   "routes": [
     { "handle": "filesystem" },
