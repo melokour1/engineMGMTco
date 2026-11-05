@@ -1,6 +1,6 @@
 # EngineMgmt — enginemanagement.co
 
-Local SEO agency site. 4 pages, static HTML + CSS + JS. Deployed via GitHub Pages at `enginemanagement.co`.
+Local SEO agency site. Static HTML + CSS + JS, deployed on **Vercel** (project `engine-mgm-tco`) and served at `enginemanagement.co`.
 
 ---
 
@@ -17,7 +17,7 @@ enginemgmtco/
 ├── main.js             # Form submissions + UTM capture + map toggle
 ├── robots.txt
 ├── sitemap.xml
-├── CNAME               # Points to enginemanagement.co
+├── vercel.json         # Clean URLs (/strategy, /tips, …)
 └── assets/
     ├── logo.svg        # Horizontal wordmark
     ├── logo-icon.svg   # Icon only (for navbar)
@@ -27,53 +27,21 @@ enginemgmtco/
 
 ---
 
-## 🚀 Deploy — first time setup
+## 🚀 Deploy
 
-### 1. Push to GitHub
+The Vercel project `engine-mgm-tco` is connected to this repo: every push to `main` deploys to production, and every other branch gets a preview URL.
 
-```bash
-cd enginemgmtco
-git init
-git add .
-git commit -m "Initial V1 site"
-git branch -M main
-git remote add origin https://github.com/melokour1/enginemgmtco.git
-git push -u origin main
-```
+`vercel.json` turns on `cleanUrls`, so `/strategy`, `/tips`, `/terms`, `/privacy`, `/watch` and `/free-analysis` serve the matching `.html` file, and `404.html` is used for anything else.
 
-### 2. Enable GitHub Pages
-
-- Go to repo → **Settings** → **Pages**
-- Source: **Deploy from a branch**
-- Branch: **main** / **(root)**
-- Save
-
-Site will live at `https://melokour1.github.io/enginemgmtco/` within a few minutes.
-
-### 3. Configure custom domain
-
-- In Settings → Pages, under "Custom domain" enter: `enginemanagement.co`
-- Click Save. GitHub will verify DNS.
-- Check "Enforce HTTPS" once verification completes (~10 min after DNS propagates).
-
-### 4. Configure DNS at your domain registrar
-
-Add these records for `enginemanagement.co`:
-
-**For apex domain (enginemanagement.co):** 4 A records pointing to GitHub
-```
-Type: A   Host: @   Value: 185.199.108.153
-Type: A   Host: @   Value: 185.199.109.153
-Type: A   Host: @   Value: 185.199.110.153
-Type: A   Host: @   Value: 185.199.111.153
-```
-
-**For www subdomain:**
-```
-Type: CNAME   Host: www   Value: melokour1.github.io
-```
-
-DNS propagation takes 5 min to 24 hours (usually ~30 min).
+### Custom domain
+1. Vercel → `engine-mgm-tco` → Settings → Domains → add `enginemanagement.co` and `www.enginemanagement.co` (redirect www → apex).
+2. GoDaddy DNS for `enginemanagement.co`:
+   ```
+   Type: A      Host: @    Value: 76.76.21.21
+   Type: CNAME  Host: www  Value: cname.vercel-dns.com
+   ```
+   Remove any other A records on `@` and any GoDaddy forwarding. Leave the MX, TXT (SPF), `_dmarc` and Microsoft 365 records alone: they run email.
+3. Vercel issues HTTPS automatically once DNS resolves.
 
 ---
 
@@ -87,7 +55,7 @@ git commit -m "Describe what changed"
 git push
 ```
 
-GitHub Pages rebuilds within 1-2 minutes. Hard-refresh (Cmd+Shift+R) to see changes.
+Vercel deploys within about a minute of a push to main. Hard-refresh (Cmd+Shift+R) to see changes.
 
 ---
 
@@ -172,7 +140,7 @@ All italic serif text uses the `.serif-accent` class. This is the design signatu
 → Make sure SPF/DKIM/DMARC are set up correctly on enginemanagement.co in Microsoft 365.
 
 **Site shows old content after update**
-→ Hard refresh (Cmd+Shift+R). GitHub Pages caches aggressively.
+→ Hard refresh (Cmd+Shift+R), or check the latest deployment in Vercel.
 
 **Custom domain won't verify**
 → DNS propagation takes time. Run `dig enginemanagement.co` — should show the 4 GitHub IPs. If not, DNS records are wrong.
